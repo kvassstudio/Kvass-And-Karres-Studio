@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KvassStudio | Инди-студия разработки игр</title>
+    <title>KvassStudio & Karess Studio | Сайт двух студий</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -23,10 +23,9 @@
                             bg: '#0b0d10',
                             card: '#13171f',
                             cardBorder: '#232936',
-                            accent: '#f97316',
-                            accentGlow: '#ff8c00',
-                            cyan: '#06b6d4',
+                            orange: '#f97316',
                             purple: '#a855f7',
+                            tiktok: '#ff0050',
                             telegram: '#229ED9',
                             youtube: '#FF0000'
                         }
@@ -52,20 +51,12 @@
             font-family: 'Orbitron', sans-serif;
         }
 
-        .glow-accent {
+        .glow-kvass {
             box-shadow: 0 0 25px rgba(249, 115, 22, 0.35);
         }
 
-        .glow-accent-hover:hover {
-            box-shadow: 0 0 30px rgba(249, 115, 22, 0.6);
-        }
-
-        .glow-telegram:hover {
-            box-shadow: 0 0 25px rgba(34, 158, 217, 0.5);
-        }
-
-        .glow-youtube:hover {
-            box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+        .glow-karess {
+            box-shadow: 0 0 25px rgba(168, 85, 247, 0.35);
         }
 
         .glass-card {
@@ -75,73 +66,72 @@
         }
 
         .glass-card:hover {
-            border-color: rgba(249, 115, 22, 0.4);
+            border-color: rgba(255, 255, 255, 0.2);
         }
 
         .bg-grid-pattern {
-            background-image: radial-gradient(rgba(249, 115, 22, 0.15) 1px, transparent 1px);
+            background-image: radial-gradient(rgba(249, 115, 22, 0.12) 1px, transparent 1px);
             background-size: 32px 32px;
         }
 
         .hero-gradient {
-            background: radial-gradient(circle at 50% 20%, rgba(249, 115, 22, 0.15) 0%, rgba(11, 13, 16, 1) 70%);
+            background: radial-gradient(circle at 50% 20%, rgba(249, 115, 22, 0.12) 0%, rgba(168, 85, 247, 0.1) 40%, rgba(11, 13, 16, 1) 75%);
         }
     </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between selection:bg-orange-500 selection:text-white">
 
-    <!-- Background Gradients -->
     <div class="fixed inset-0 bg-grid-pattern opacity-40 pointer-events-none z-0"></div>
     <div class="fixed -top-40 -left-40 w-96 h-96 bg-orange-600/20 rounded-full blur-[128px] pointer-events-none z-0"></div>
-    <div class="fixed top-1/2 -right-40 w-96 h-96 bg-purple-600/15 rounded-full blur-[128px] pointer-events-none z-0"></div>
+    <div class="fixed top-1/2 -right-40 w-96 h-96 bg-purple-600/20 rounded-full blur-[128px] pointer-events-none z-0"></div>
 
     <div class="relative z-10 flex flex-col min-h-screen">
         
-        <header class="sticky top-0 z-50 glass-card border-b border-gray-800/80 bg-kvass-bg/80">
+        <header class="sticky top-0 z-50 glass-card border-b border-gray-800/80 bg-kvass-bg/85 backdrop-blur-md">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex items-center justify-between h-20">
-                    <!-- Логотип -->
+                    
+                    <!-- Двойной логотип студий -->
                     <a href="#home" class="flex items-center space-x-3 group">
-                        <div class="relative">
+                        <div class="flex items-center -space-x-2">
                             <img src="https://i.ibb.co.com/prJDZjvN/Kvass-Studio.jpg" 
                                  alt="KvassStudio Logo" 
                                  onerror="this.src='https://placehold.co/100x100/13171f/f97316?text=KS'"
-                                 class="w-12 h-12 rounded-xl object-cover ring-2 ring-orange-500/50 group-hover:ring-orange-500 transition-all duration-300 transform group-hover:scale-105 shadow-lg shadow-orange-500/20">
+                                 class="w-10 h-10 rounded-xl object-cover ring-2 ring-orange-500 z-10 transition-transform group-hover:scale-105">
+                            <img src="https://i.ibb.co.com/3YdYWWwX/image.png" 
+                                 alt="Karess Studio Logo" 
+                                 onerror="this.src='https://placehold.co/100x100/13171f/a855f7?text=KS'"
+                                 class="w-10 h-10 rounded-xl object-cover ring-2 ring-purple-500 z-0 transition-transform group-hover:scale-105">
                         </div>
-                        <span class="font-title text-2xl font-black tracking-wider text-white group-hover:text-orange-400 transition-colors">
-                            Kvass<span class="text-orange-500">Studio</span>
+                        <span class="font-title text-xl sm:text-2xl font-black tracking-wider text-white">
+                            <span class="text-orange-500">Kvass</span> & <span class="text-purple-400">Karess</span>
                         </span>
                     </a>
 
-                    <!-- ПК Навигация -->
-                    <nav class="hidden md:flex items-center space-x-8 font-medium">
+                    <!-- Навигация -->
+                    <nav class="hidden md:flex items-center space-x-7 font-medium text-sm">
                         <a href="#home" class="text-gray-300 hover:text-orange-400 transition-colors py-1">Главная</a>
-                        <a href="#about" class="text-gray-300 hover:text-orange-400 transition-colors py-1">О студии</a>
+                        <a href="#studios" class="text-gray-300 hover:text-orange-400 transition-colors py-1">Студии</a>
                         <a href="#team" class="text-gray-300 hover:text-orange-400 transition-colors py-1">Команда</a>
-                        <a href="#games" class="text-gray-300 hover:text-orange-400 transition-colors py-1">Наши Игры</a>
-                        <a href="#community" class="text-gray-300 hover:text-orange-400 transition-colors py-1">Соцсети</a>
+                        <a href="#games" class="text-gray-300 hover:text-orange-400 transition-colors py-1">Игры</a>
+                        <a href="#community" class="text-gray-300 hover:text-orange-400 transition-colors py-1">Сообщество</a>
                     </nav>
 
-                    <!-- Социальные кнопки в шапке -->
-                    <div class="hidden md:flex items-center space-x-3">
-                        <a href="https://t.me/mwKvassStudio" target="_blank" rel="noopener noreferrer" 
-                           class="w-10 h-10 rounded-xl glass-card flex items-center justify-center text-gray-300 hover:text-white hover:bg-[#229ED9] transition-all duration-300 glow-telegram"
-                           title="Telegram канал">
-                            <i class="fa-brands fa-telegram text-lg"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@KvassStudio" target="_blank" rel="noopener noreferrer" 
-                           class="w-10 h-10 rounded-xl glass-card flex items-center justify-center text-gray-300 hover:text-white hover:bg-[#FF0000] transition-all duration-300 glow-youtube"
-                           title="YouTube канал">
-                            <i class="fa-brands fa-youtube text-lg"></i>
-                        </a>
+                    <!-- Социальные быстрые ссылки -->
+                    <div class="hidden lg:flex items-center space-x-2">
                         <a href="https://kvassstudio.itch.io/" target="_blank" rel="noopener noreferrer" 
-                           class="relative inline-flex items-center gap-2 px-4 py-2 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-orange-600 to-amber-500 hover:from-orange-500 hover:to-amber-400 transition-all duration-300 shadow-md glow-accent glow-accent-hover">
-                            <i class="fa-brands font-bold text-lg fa-itch-io"></i>
-                            <span>Itch.io</span>
+                           class="px-3 py-1.5 rounded-xl font-bold text-xs text-white bg-orange-600/80 hover:bg-orange-500 transition-all duration-300 flex items-center gap-1.5 border border-orange-500/30">
+                            <i class="fa-brands fa-itch-io"></i>
+                            <span>Kvass Itch</span>
+                        </a>
+                        <a href="https://mr-kotyast-studio.itch.io/" target="_blank" rel="noopener noreferrer" 
+                           class="px-3 py-1.5 rounded-xl font-bold text-xs text-white bg-purple-600/80 hover:bg-purple-500 transition-all duration-300 flex items-center gap-1.5 border border-purple-500/30">
+                            <i class="fa-brands fa-itch-io"></i>
+                            <span>Karess Itch</span>
                         </a>
                     </div>
 
-                    <!-- Мобильная кнопка меню -->
+                    <!-- Кнопка мобильного меню -->
                     <button id="mobile-menu-btn" type="button" class="md:hidden text-gray-300 hover:text-white focus:outline-none p-2 rounded-lg bg-gray-800/50">
                         <i class="fas fa-bars text-xl" id="menu-icon"></i>
                     </button>
@@ -151,100 +141,149 @@
             <!-- Мобильное меню -->
             <div id="mobile-menu" class="hidden md:hidden border-t border-gray-800 bg-kvass-bg/95 px-4 pt-3 pb-6 space-y-3">
                 <a href="#home" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800/60">Главная</a>
-                <a href="#about" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800/60">О студии</a>
-                <a href="#team" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800/60">Команда</a>
-                <a href="#games" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800/60">Наши Игры</a>
+                <a href="#studios" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800/60">Наши Студии</a>
+                <a href="#team" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800/60">Разработчики</a>
+                <a href="#games" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800/60">Все Игры</a>
                 <a href="#community" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800/60">Сообщество</a>
-                <div class="pt-2 flex flex-col space-y-2">
-                    <a href="https://t.me/mwKvassStudio" target="_blank" rel="noopener noreferrer" 
-                       class="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-xl font-semibold text-white bg-[#229ED9]">
-                        <i class="fa-brands fa-telegram text-lg"></i>
-                        <span>Telegram Канал</span>
-                    </a>
-                    <a href="https://www.youtube.com/@KvassStudio" target="_blank" rel="noopener noreferrer" 
-                       class="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-xl font-semibold text-white bg-[#FF0000]">
-                        <i class="fa-brands fa-youtube text-lg"></i>
-                        <span>YouTube Канал</span>
-                    </a>
-                    <a href="https://kvassstudio.itch.io/" target="_blank" rel="noopener noreferrer" 
-                       class="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-xl font-semibold text-white bg-gradient-to-r from-orange-600 to-amber-500">
-                        <i class="fa-brands fa-itch-io text-lg"></i>
-                        <span>Itch.io Студии</span>
-                    </a>
-                </div>
             </div>
         </header>
 
-        <section id="home" class="relative hero-gradient pt-20 pb-24 md:pt-32 md:pb-36 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+        <section id="home" class="relative hero-gradient pt-20 pb-24 md:pt-28 md:pb-32 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
             <div class="max-w-4xl mx-auto text-center space-y-8">
                 
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border-orange-500/30 text-orange-400 text-sm font-medium">
-                    <span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
-                    <span>Независимая инди-студия разработки игр</span>
+                <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full glass-card border-orange-500/30 text-xs sm:text-sm font-medium">
+                    <span class="flex h-2 w-2 relative">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+                    </span>
+                    <span class="text-gray-300">Совместный сайт студий: <strong class="text-orange-400">KvassStudio</strong> & <strong class="text-purple-400">Karess Studio</strong></span>
                 </div>
 
-                <h1 class="font-title text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white leading-tight">
-                    Создаём уникальные <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-amber-400 to-yellow-500">игры и миры</span>
+                <h1 class="font-title text-4xl sm:text-6xl md:text-7xl font-black tracking-tight text-white leading-tight">
+                    Две Студии. <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-pink-500 to-purple-500">Вместе Делаем Игры.</span>
                 </h1>
 
-                <p class="max-w-2xl mx-auto text-lg sm:text-xl text-gray-400 font-normal leading-relaxed">
-                    Добро пожаловать в <strong class="text-white">KvassStudio</strong>! Мы разрабатываем захватывающие и динамичные видеоигры с упором на интересный геймплей, оригинальную атмосферу и драйв.
+                <p class="max-w-2xl mx-auto text-base sm:text-xl text-gray-400 font-normal leading-relaxed">
+                    Добро пожаловать на общий сайт разработчиков <strong class="text-orange-400">KlassKvas</strong> и <strong class="text-purple-400">MRkotyast</strong>. Мы создаём крутые инди-игры, делимся новостями и экспериментируем с проектами.
                 </p>
 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
                     <a href="#games" 
-                       class="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-orange-600 to-amber-500 hover:from-orange-500 hover:to-amber-400 transition-all duration-300 shadow-lg glow-accent glow-accent-hover transform hover:-translate-y-1 flex items-center justify-center gap-3">
+                       class="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-orange-600 via-pink-600 to-purple-600 hover:opacity-90 transition-all duration-300 shadow-lg glow-kvass transform hover:-translate-y-0.5 flex items-center justify-center gap-3">
                         <i class="fas fa-gamepad text-lg"></i>
-                        <span>Смотреть проекты</span>
+                        <span>Смотреть все игры</span>
                     </a>
                     
-                    <a href="https://t.me/mwKvassStudio" target="_blank" rel="noopener noreferrer" 
-                       class="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-gray-200 glass-card hover:bg-[#229ED9] hover:text-white transition-all duration-300 flex items-center justify-center gap-3 transform hover:-translate-y-1">
-                        <i class="fa-brands fa-telegram text-lg text-[#229ED9] group-hover:text-white"></i>
-                        <span>Наш Telegram</span>
+                    <a href="#studios" 
+                       class="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-gray-200 glass-card hover:bg-gray-800 transition-all duration-300 flex items-center justify-center gap-3 transform hover:-translate-y-0.5">
+                        <i class="fas fa-cubes text-lg text-purple-400"></i>
+                        <span>О наших студиях</span>
                     </a>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="py-20 bg-kvass-bg/50 relative border-t border-b border-gray-800/50">
+        <section id="studios" class="py-20 bg-kvass-bg/70 relative border-t border-b border-gray-800/60">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                
+                <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                    <div class="inline-block px-3 py-1 rounded-md bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs font-bold uppercase tracking-wider">
+                        Наши Студии
+                    </div>
+                    <h2 class="font-title text-3xl sm:text-4xl font-bold text-white">
+                        Игровые Студии
+                    </h2>
+                    <p class="text-gray-400">
+                        У каждого из нас своя студия, но мы всегда поддерживаем проекты друг друга.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     
-                    <div class="space-y-6">
-                        <div class="inline-block px-3 py-1 rounded-md bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs font-bold uppercase tracking-wider">
-                            О нас
+                    <!-- KvassStudio Card -->
+                    <div class="glass-card rounded-2xl p-8 border-t-4 border-t-orange-500 flex flex-col justify-between relative overflow-hidden group">
+                        <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-orange-500/10 rounded-full blur-3xl group-hover:bg-orange-500/20 transition-all"></div>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4">
+                                <img src="https://i.ibb.co.com/prJDZjvN/Kvass-Studio.jpg" 
+                                     alt="KvassStudio Logo" 
+                                     onerror="this.src='https://placehold.co/120x120/13171f/f97316?text=KvassStudio'"
+                                     class="w-16 h-16 rounded-2xl object-cover ring-2 ring-orange-500/50 shadow-lg shadow-orange-500/20">
+                                <div>
+                                    <h3 class="font-title text-2xl font-bold text-white">KvassStudio</h3>
+                                    <p class="text-xs text-orange-400 font-semibold uppercase tracking-wider">Основатель: KlassKvas</p>
+                                </div>
+                            </div>
+
+                            <p class="text-gray-300 text-sm leading-relaxed">
+                                Студия, создающая энергичные и динамичные игры. Специализируется на 3D-платформерах, паркур-механиках и высокоскоростном геймплее.
+                            </p>
+
+                            <!-- Ссылки KvassStudio -->
+                            <div class="pt-2 flex flex-wrap gap-2">
+                                <a href="https://kvassstudio.itch.io/" target="_blank" rel="noopener noreferrer"
+                                   class="px-3 py-2 rounded-xl bg-orange-500/10 hover:bg-orange-500/20 border border-orange-500/30 text-orange-300 text-xs font-semibold flex items-center gap-2 transition-colors">
+                                    <i class="fa-brands fa-itch-io"></i> Itch.io
+                                </a>
+                                <a href="https://t.me/mwKvassStudio" target="_blank" rel="noopener noreferrer"
+                                   class="px-3 py-2 rounded-xl bg-[#229ED9]/10 hover:bg-[#229ED9]/20 border border-[#229ED9]/30 text-[#229ED9] text-xs font-semibold flex items-center gap-2 transition-colors">
+                                    <i class="fa-brands fa-telegram"></i> Telegram
+                                </a>
+                                <a href="https://www.youtube.com/@KvassStudio" target="_blank" rel="noopener noreferrer"
+                                   class="px-3 py-2 rounded-xl bg-[#FF0000]/10 hover:bg-[#FF0000]/20 border border-[#FF0000]/30 text-[#FF0000] text-xs font-semibold flex items-center gap-2 transition-colors">
+                                    <i class="fa-brands fa-youtube"></i> YouTube
+                                </a>
+                            </div>
                         </div>
-                        <h2 class="font-title text-3xl sm:text-4xl font-bold text-white">
-                            Страсть к созданию качественных игр
-                        </h2>
-                        <p class="text-gray-400 leading-relaxed">
-                            <strong class="text-white">KvassStudio</strong> — это инди-команда разработчиков, воплощающая смелые идеи в реальность. Мы экспериментируем с механиками, создаем динамичные уровни и уделяем внимание каждой детали.
-                        </p>
-                        <div class="grid grid-cols-2 gap-4 pt-4">
-                            <div class="glass-card p-4 rounded-xl">
-                                <div class="text-3xl font-bold text-orange-500 font-title">2+</div>
-                                <div class="text-sm text-gray-400 mt-1">Реализованных проекта</div>
-                            </div>
-                            <div class="glass-card p-4 rounded-xl">
-                                <div class="text-3xl font-bold text-amber-500 font-title">100%</div>
-                                <div class="text-sm text-gray-400 mt-1">Инди драйв и энтузиазм</div>
-                            </div>
+
+                        <div class="mt-8 pt-6 border-t border-gray-800 flex justify-between items-center text-xs text-gray-400">
+                            <span>Проекты: BHopLevels, Viobox</span>
+                            <span class="text-orange-400 font-bold">2 игры</span>
                         </div>
                     </div>
 
-                    <div class="flex justify-center">
-                        <div class="relative group">
-                            <div class="absolute -inset-1 bg-gradient-to-r from-orange-600 to-amber-600 rounded-2xl blur opacity-30 group-hover:opacity-75 transition duration-500"></div>
-                            <div class="relative glass-card p-6 rounded-2xl border border-gray-800 flex flex-col items-center text-center max-w-sm">
-                                <img src="https://i.ibb.co.com/prJDZjvN/Kvass-Studio.jpg" 
-                                     alt="KvassStudio Logo" 
-                                     onerror="this.src='https://placehold.co/400x400/13171f/f97316?text=KvassStudio'"
-                                     class="w-48 h-48 rounded-2xl object-cover mb-6 shadow-2xl ring-2 ring-orange-500/30">
-                                <h3 class="font-title text-xl font-bold text-white">KvassStudio</h3>
-                                <p class="text-sm text-gray-400 mt-2">Игровая индустрия вдохновляет нас на создание нового опыта для игроков по всему миру.</p>
+                    <!-- Karess Studio Card -->
+                    <div class="glass-card rounded-2xl p-8 border-t-4 border-t-purple-500 flex flex-col justify-between relative overflow-hidden group">
+                        <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-purple-500/10 rounded-full blur-3xl group-hover:bg-purple-500/20 transition-all"></div>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4">
+                                <img src="https://i.ibb.co.com/3YdYWWwX/image.png" 
+                                     alt="Karess Studio Logo" 
+                                     onerror="this.src='https://placehold.co/120x120/13171f/a855f7?text=KaressStudio'"
+                                     class="w-16 h-16 rounded-2xl object-cover ring-2 ring-purple-500/50 shadow-lg shadow-purple-500/20">
+                                <div>
+                                    <h3 class="font-title text-2xl font-bold text-white">Karess Studio</h3>
+                                    <p class="text-xs text-purple-400 font-semibold uppercase tracking-wider">Основатель: MRkotyast</p>
+                                </div>
                             </div>
+
+                            <p class="text-gray-300 text-sm leading-relaxed">
+                                Инди-студия, фокусирующаяся на атмосферных хоррорах, необычных механиках с камерой и уникальном стилизованном визуальном опыте.
+                            </p>
+
+                            <!-- Ссылки Karess Studio -->
+                            <div class="pt-2 flex flex-wrap gap-2">
+                                <a href="https://mr-kotyast-studio.itch.io/" target="_blank" rel="noopener noreferrer"
+                                   class="px-3 py-2 rounded-xl bg-purple-500/10 hover:bg-purple-500/20 border border-purple-500/30 text-purple-300 text-xs font-semibold flex items-center gap-2 transition-colors">
+                                    <i class="fa-brands fa-itch-io"></i> Itch.io
+                                </a>
+                                <a href="https://t.me/kotyastchanel" target="_blank" rel="noopener noreferrer"
+                                   class="px-3 py-2 rounded-xl bg-[#229ED9]/10 hover:bg-[#229ED9]/20 border border-[#229ED9]/30 text-[#229ED9] text-xs font-semibold flex items-center gap-2 transition-colors">
+                                    <i class="fa-brands fa-telegram"></i> Telegram
+                                </a>
+                                <a href="https://www.tiktok.com/@karres.studio" target="_blank" rel="noopener noreferrer"
+                                   class="px-3 py-2 rounded-xl bg-[#ff0050]/10 hover:bg-[#ff0050]/20 border border-[#ff0050]/30 text-[#ff0050] text-xs font-semibold flex items-center gap-2 transition-colors">
+                                    <i class="fa-brands fa-tiktok"></i> TikTok
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-gray-800 flex justify-between items-center text-xs text-gray-400">
+                            <span>Проекты: Something's Not Right Here, REC CAM</span>
+                            <span class="text-purple-400 font-bold">2 игры</span>
                         </div>
                     </div>
 
@@ -255,58 +294,52 @@
         <section id="team" class="py-20 relative">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
-                    <div class="inline-block px-3 py-1 rounded-md bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs font-bold uppercase tracking-wider">
-                        Наша Команда
+                <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                    <div class="inline-block px-3 py-1 rounded-md bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-bold uppercase tracking-wider">
+                        Разработчики
                     </div>
                     <h2 class="font-title text-3xl sm:text-4xl font-bold text-white">
-                        Состав KvassStudio
+                        Кто Стоит За Играми
                     </h2>
                     <p class="text-gray-400">
-                        Создатели ваших любимых проектов.
+                        Основатели студий и авторы всех представленных проектов.
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                     
                     <!-- KlassKvas -->
-                    <div class="glass-card p-6 rounded-2xl relative overflow-hidden transition-all duration-300 hover:-translate-y-1 group flex items-center space-x-5 border border-orange-500/30">
-                        <div class="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full blur-2xl group-hover:bg-orange-500/20 transition-all"></div>
-                        
+                    <div class="glass-card p-6 rounded-2xl relative overflow-hidden transition-all duration-300 hover:-translate-y-1 group flex items-center space-x-5 border-l-4 border-l-orange-500">
                         <div class="relative flex-shrink-0">
                             <img src="https://i.ibb.co.com/JWtDKFcs/Klass-Kvas.jpg" 
                                  alt="KlassKvas Avatar" 
                                  onerror="this.src='https://placehold.co/120x120/13171f/f97316?text=KlassKvas'"
                                  class="w-20 h-20 rounded-2xl object-cover ring-2 ring-orange-500 shadow-lg shadow-orange-500/30 group-hover:scale-105 transition-transform duration-300">
-                            <span class="absolute -bottom-1 -right-1 bg-orange-500 text-black text-[10px] font-black px-1.5 py-0.5 rounded shadow" title="Основатель">
+                            <span class="absolute -bottom-1 -right-1 bg-orange-500 text-black text-[10px] font-black px-1.5 py-0.5 rounded shadow">
                                 <i class="fas fa-crown"></i>
                             </span>
                         </div>
 
                         <div>
-                            <div class="flex items-center gap-2">
-                                <h3 class="font-title text-2xl font-bold text-white group-hover:text-orange-400 transition-colors">
-                                    KlassKvas
-                                </h3>
-                            </div>
-                            <p class="text-orange-400 text-sm font-semibold mt-0.5">Основатель & Владелец</p>
+                            <h3 class="font-title text-2xl font-bold text-white group-hover:text-orange-400 transition-colors">
+                                KlassKvas
+                            </h3>
+                            <p class="text-orange-400 text-sm font-semibold mt-1">Основатель и владелец KvassStudio</p>
                             <span class="inline-block mt-2 text-xs px-2.5 py-0.5 rounded-full bg-orange-500/10 text-orange-300 border border-orange-500/20 font-medium">
-                                Founder & Owner
+                                KvassStudio
                             </span>
                         </div>
                     </div>
 
                     <!-- MRkotyast -->
-                    <div class="glass-card p-6 rounded-2xl relative overflow-hidden transition-all duration-300 hover:-translate-y-1 group flex items-center space-x-5">
-                        <div class="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl group-hover:bg-purple-500/20 transition-all"></div>
-                        
+                    <div class="glass-card p-6 rounded-2xl relative overflow-hidden transition-all duration-300 hover:-translate-y-1 group flex items-center space-x-5 border-l-4 border-l-purple-500">
                         <div class="relative flex-shrink-0">
                             <img src="https://i.ibb.co.com/GQmVPwRW/MRkotyast.jpg" 
                                  alt="MRkotyast Avatar" 
                                  onerror="this.src='https://placehold.co/120x120/13171f/a855f7?text=MRkotyast'"
-                                 class="w-20 h-20 rounded-2xl object-cover ring-2 ring-purple-500/60 shadow-lg shadow-purple-500/30 group-hover:scale-105 transition-transform duration-300">
-                            <span class="absolute -bottom-1 -right-1 bg-purple-600 text-white text-[10px] font-black px-1.5 py-0.5 rounded shadow" title="Разработчик">
-                                <i class="fas fa-code"></i>
+                                 class="w-20 h-20 rounded-2xl object-cover ring-2 ring-purple-500 shadow-lg shadow-purple-500/30 group-hover:scale-105 transition-transform duration-300">
+                            <span class="absolute -bottom-1 -right-1 bg-purple-500 text-white text-[10px] font-black px-1.5 py-0.5 rounded shadow">
+                                <i class="fas fa-crown"></i>
                             </span>
                         </div>
 
@@ -314,9 +347,9 @@
                             <h3 class="font-title text-2xl font-bold text-white group-hover:text-purple-400 transition-colors">
                                 MRkotyast
                             </h3>
-                            <p class="text-purple-400 text-sm font-semibold mt-0.5">Разработчик</p>
+                            <p class="text-purple-400 text-sm font-semibold mt-1">Основатель и владелец Karess Studio</p>
                             <span class="inline-block mt-2 text-xs px-2.5 py-0.5 rounded-full bg-purple-500/10 text-purple-300 border border-purple-500/20 font-medium">
-                                Developer
+                                Karess Studio
                             </span>
                         </div>
                     </div>
@@ -325,92 +358,167 @@
             </div>
         </section>
 
-        <section id="games" class="py-20 bg-kvass-bg/60 relative border-t border-gray-800/50">
+        <section id="games" class="py-20 bg-kvass-bg/70 relative border-t border-gray-800/60">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <div class="text-center max-w-2xl mx-auto mb-10 space-y-3">
                     <div class="inline-block px-3 py-1 rounded-md bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs font-bold uppercase tracking-wider">
-                        Портфолио
+                        Каталог Игр
                     </div>
                     <h2 class="font-title text-3xl sm:text-4xl font-bold text-white">
-                        Наши Проекты
+                        Наши Игры
                     </h2>
                     <p class="text-gray-400">
-                        Опробуйте наши игры прямо сейчас на платформе Itch.io!
+                        Выбирайте игры от KvassStudio или Karess Studio и играйте прямо сейчас!
                     </p>
                 </div>
 
+                <!-- Фильтры Игр -->
+                <div class="flex justify-center items-center gap-2 mb-12 flex-wrap">
+                    <button onclick="filterGames('all')" id="btn-all" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-gradient-to-r from-orange-500 to-purple-600 text-white shadow-md">
+                        Все Проекты (4)
+                    </button>
+                    <button onclick="filterGames('kvass')" id="btn-kvass" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all glass-card text-gray-300 hover:text-orange-400">
+                        KvassStudio (2)
+                    </button>
+                    <button onclick="filterGames('karess')" id="btn-karess" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all glass-card text-gray-300 hover:text-purple-400">
+                        Karess Studio (2)
+                    </button>
+                </div>
+
+                <!-- Карточки Игр -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     
-                    <!-- BHopLevels -->
-                    <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-orange-500/50 transition-all duration-300">
+                    <!-- 1. BHopLevels (KvassStudio) -->
+                    <div class="game-card kvass glass-card rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-orange-500/50 transition-all duration-300">
                         <div>
-                            <div class="h-56 bg-gray-900 relative overflow-hidden border-b border-gray-800">
+                            <div class="h-60 bg-gray-900 relative overflow-hidden border-b border-gray-800">
                                 <img src="https://img.itch.zone/aW1nLzMwMjM5NDM1LnBuZw==/original/923xSk.png" 
                                      alt="BHopLevels Thumbnail" 
                                      onerror="this.src='https://placehold.co/600x400/13171f/f97316?text=BHopLevels'"
                                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-                                <span class="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold bg-orange-500/80 backdrop-blur-md text-white border border-orange-400/30 shadow-lg">
-                                    Платформер / Паркур
+                                <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-orange-600/90 text-white border border-orange-400/30 shadow-lg">
+                                    KvassStudio
+                                </span>
+                                <span class="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold bg-black/60 backdrop-blur-md text-gray-200 border border-gray-700">
+                                    Паркур / Бхоп
                                 </span>
                             </div>
 
                             <div class="p-6 space-y-4">
-                                <h3 class="font-title text-2xl font-black text-white tracking-wider group-hover:text-orange-400 transition-colors">BHopLevels</h3>
+                                <h3 class="font-title text-2xl font-black text-white group-hover:text-orange-400 transition-colors">BHopLevels</h3>
                                 <p class="text-gray-300 text-sm leading-relaxed">
                                     Увлекательный паркур/бхоп платформер с динамичным геймплеем и прохождением уровней на скорость. Оттачивайте навыки и проходите препятствия!
                                 </p>
-
-                                <div class="flex flex-wrap gap-2 pt-2">
-                                    <span class="text-xs px-2.5 py-1 rounded-md bg-gray-800/80 text-gray-400">Bhop</span>
-                                    <span class="text-xs px-2.5 py-1 rounded-md bg-gray-800/80 text-gray-400">Parkour</span>
-                                    <span class="text-xs px-2.5 py-1 rounded-md bg-gray-800/80 text-gray-400">Speedrun</span>
-                                    <span class="text-xs px-2.5 py-1 rounded-md bg-gray-800/80 text-gray-400">3D</span>
-                                </div>
                             </div>
                         </div>
 
                         <div class="p-6 pt-0">
                             <a href="https://kvassstudio.itch.io/bhoplevels" target="_blank" rel="noopener noreferrer" 
-                               class="w-full py-3 px-4 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-orange-600 to-amber-500 hover:from-orange-500 hover:to-amber-400 transition-all flex items-center justify-center gap-2 shadow-lg group-hover:shadow-orange-500/20">
+                               class="w-full py-3 px-4 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-orange-600 to-amber-500 hover:from-orange-500 hover:to-amber-400 transition-all flex items-center justify-center gap-2 shadow-lg">
                                 <span>Играть на Itch.io</span>
                                 <i class="fas fa-external-link-alt text-xs"></i>
                             </a>
                         </div>
                     </div>
 
-                    <!-- Viobox -->
-                    <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-purple-500/50 transition-all duration-300">
+                    <!-- 2. Viobox (KvassStudio) -->
+                    <div class="game-card kvass glass-card rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-orange-500/50 transition-all duration-300">
                         <div>
-                            <div class="h-56 bg-gray-900 relative overflow-hidden border-b border-gray-800">
+                            <div class="h-60 bg-gray-900 relative overflow-hidden border-b border-gray-800">
                                 <img src="https://img.itch.zone/aW1nLzI3ODg0NDg4LnBuZw==/315x250%23c/59Cet9.png" 
                                      alt="Viobox Thumbnail" 
-                                     onerror="this.src='https://placehold.co/600x400/13171f/a855f7?text=Viobox'"
+                                     onerror="this.src='https://placehold.co/600x400/13171f/f97316?text=Viobox'"
                                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-                                <span class="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold bg-purple-600/80 backdrop-blur-md text-white border border-purple-400/30 shadow-lg">
-                                    Инди Игрушка
+                                <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-orange-600/90 text-white border border-orange-400/30 shadow-lg">
+                                    KvassStudio
+                                </span>
+                                <span class="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold bg-black/60 backdrop-blur-md text-gray-200 border border-gray-700">
+                                    Инди
                                 </span>
                             </div>
 
                             <div class="p-6 space-y-4">
-                                <h3 class="font-title text-2xl font-black text-white tracking-wider group-hover:text-purple-400 transition-colors">Viobox</h3>
+                                <h3 class="font-title text-2xl font-black text-white group-hover:text-orange-400 transition-colors">Viobox</h3>
                                 <p class="text-gray-300 text-sm leading-relaxed">
-                                    Атмосферная и увлекательная инди-игра от KvassStudio. Погрузитесь в захватывающий игровой процесс и уникальный визуал.
+                                    Атмосферная и увлекательная инди-игра от KvassStudio. Погрузитесь в захватывающий игровой процесс и уникальный стиль.
                                 </p>
-
-                                <div class="flex flex-wrap gap-2 pt-2">
-                                    <span class="text-xs px-2.5 py-1 rounded-md bg-gray-800/80 text-gray-400">Indie</span>
-                                    <span class="text-xs px-2.5 py-1 rounded-md bg-gray-800/80 text-gray-400">Atmospheric</span>
-                                    <span class="text-xs px-2.5 py-1 rounded-md bg-gray-800/80 text-gray-400">KvassStudio</span>
-                                </div>
                             </div>
                         </div>
 
                         <div class="p-6 pt-0">
                             <a href="https://kvassstudio.itch.io/viobox" target="_blank" rel="noopener noreferrer" 
-                               class="w-full py-3 px-4 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 transition-all flex items-center justify-center gap-2 shadow-lg group-hover:shadow-purple-500/20">
+                               class="w-full py-3 px-4 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-orange-600 to-amber-500 hover:from-orange-500 hover:to-amber-400 transition-all flex items-center justify-center gap-2 shadow-lg">
+                                <span>Играть на Itch.io</span>
+                                <i class="fas fa-external-link-alt text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 3. Something's Not Right Here (Karess Studio) -->
+                    <div class="game-card karess glass-card rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-purple-500/50 transition-all duration-300">
+                        <div>
+                            <div class="h-60 bg-gray-900 relative overflow-hidden border-b border-gray-800">
+                                <img src="https://img.itch.zone/aW1nLzI3ODgyOTMwLnBuZw==/315x250%23c/h112LX.png" 
+                                     alt="Something's Not Right Here Thumbnail" 
+                                     onerror="this.src='https://placehold.co/600x400/13171f/a855f7?text=Something%27s+Not+Right+Here'"
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                                <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-purple-600/90 text-white border border-purple-400/30 shadow-lg">
+                                    Karess Studio
+                                </span>
+                                <span class="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold bg-black/60 backdrop-blur-md text-gray-200 border border-gray-700">
+                                    Хоррор / Мистика
+                                </span>
+                            </div>
+
+                            <div class="p-6 space-y-4">
+                                <h3 class="font-title text-2xl font-black text-white group-hover:text-purple-400 transition-colors">Something's Not Right Here</h3>
+                                <p class="text-gray-300 text-sm leading-relaxed">
+                                    Интригующий проект от MRkotyast (Karess Studio). Исследуйте локации, наполненные аномалиями и загадочными деталями. Что-то здесь не так...
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="p-6 pt-0">
+                            <a href="https://mr-kotyast-studio.itch.io/somethings-not-right-here" target="_blank" rel="noopener noreferrer" 
+                               class="w-full py-3 px-4 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 transition-all flex items-center justify-center gap-2 shadow-lg">
+                                <span>Играть на Itch.io</span>
+                                <i class="fas fa-external-link-alt text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 4. REC CAM (Karess Studio) -->
+                    <div class="game-card karess glass-card rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-purple-500/50 transition-all duration-300">
+                        <div>
+                            <div class="h-60 bg-gray-900 relative overflow-hidden border-b border-gray-800">
+                                <img src="https://img.itch.zone/aW1nLzI3OTI2MTgxLnBuZw==/315x250%23c/zzJkZg.png" 
+                                     alt="REC CAM Thumbnail" 
+                                     onerror="this.src='https://placehold.co/600x400/13171f/a855f7?text=REC+CAM'"
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                                <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-purple-600/90 text-white border border-purple-400/30 shadow-lg">
+                                    Karess Studio
+                                </span>
+                                <span class="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold bg-black/60 backdrop-blur-md text-gray-200 border border-gray-700">
+                                    Bodycam / Хоррор
+                                </span>
+                            </div>
+
+                            <div class="p-6 space-y-4">
+                                <h3 class="font-title text-2xl font-black text-white group-hover:text-purple-400 transition-colors">REC CAM</h3>
+                                <p class="text-gray-300 text-sm leading-relaxed">
+                                    Атмосферная игра от Karess Studio с эффектом съемки на нагрудную видеокамеру. Погрузитесь в реалистичное напряженное окружение.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="p-6 pt-0">
+                            <a href="https://mr-kotyast-studio.itch.io/rec-cam" target="_blank" rel="noopener noreferrer" 
+                               class="w-full py-3 px-4 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 transition-all flex items-center justify-center gap-2 shadow-lg">
                                 <span>Играть на Itch.io</span>
                                 <i class="fas fa-external-link-alt text-xs"></i>
                             </a>
@@ -425,60 +533,62 @@
         <section id="community" class="py-20 relative">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
-                    <div class="inline-block px-3 py-1 rounded-md bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs font-bold uppercase tracking-wider">
+                <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                    <div class="inline-block px-3 py-1 rounded-md bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-bold uppercase tracking-wider">
                         Сообщество
                     </div>
                     <h2 class="font-title text-3xl sm:text-4xl font-bold text-white">
-                        Присоединяйтесь к нам
+                        Мы в Соцсетях
                     </h2>
                     <p class="text-gray-400">
-                        Следите за анонсами, новыми тизерами и процессами разработки в наших социальных сетях!
+                        Подписывайтесь на каналы студий, чтобы следовать за новостями и анонсами!
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     
-                    <!-- Telegram -->
+                    <!-- Kvass Telegram -->
                     <a href="https://t.me/mwKvassStudio" target="_blank" rel="noopener noreferrer" 
-                       class="glass-card p-8 rounded-2xl flex flex-col items-center text-center group hover:border-[#229ED9]/50 transition-all duration-300 hover:-translate-y-1">
-                        <div class="w-16 h-16 rounded-2xl bg-[#229ED9]/10 text-[#229ED9] flex items-center justify-center text-3xl mb-4 group-hover:scale-110 group-hover:bg-[#229ED9] group-hover:text-white transition-all duration-300 shadow-lg">
+                       class="glass-card p-6 rounded-2xl flex flex-col items-center text-center group hover:border-[#229ED9]/50 transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-14 h-14 rounded-2xl bg-[#229ED9]/10 text-[#229ED9] flex items-center justify-center text-2xl mb-4 group-hover:scale-110 group-hover:bg-[#229ED9] group-hover:text-white transition-all shadow-lg">
                             <i class="fa-brands fa-telegram"></i>
                         </div>
-                        <h3 class="font-title text-xl font-bold text-white mb-2">Telegram</h3>
-                        <p class="text-sm text-gray-400 mb-6">Главный канал с новостями, девлогами и анонсами обновлений.</p>
-                        <span class="mt-auto inline-flex items-center gap-2 text-xs font-bold text-[#229ED9] group-hover:underline">
-                            <span>Подписаться</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </span>
+                        <h3 class="font-title text-lg font-bold text-white mb-1">Telegram Kvass</h3>
+                        <p class="text-xs text-gray-400 mb-4">Канал студии KvassStudio</p>
+                        <span class="mt-auto text-xs font-bold text-[#229ED9] group-hover:underline">Открыть <i class="fas fa-arrow-right text-[10px]"></i></span>
                     </a>
 
-                    <!-- YouTube -->
+                    <!-- Karess Telegram -->
+                    <a href="https://t.me/kotyastchanel" target="_blank" rel="noopener noreferrer" 
+                       class="glass-card p-6 rounded-2xl flex flex-col items-center text-center group hover:border-[#229ED9]/50 transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-14 h-14 rounded-2xl bg-[#229ED9]/10 text-[#229ED9] flex items-center justify-center text-2xl mb-4 group-hover:scale-110 group-hover:bg-[#229ED9] group-hover:text-white transition-all shadow-lg">
+                            <i class="fa-brands fa-telegram"></i>
+                        </div>
+                        <h3 class="font-title text-lg font-bold text-white mb-1">Telegram Karess</h3>
+                        <p class="text-xs text-gray-400 mb-4">Личный канал MRkotyast</p>
+                        <span class="mt-auto text-xs font-bold text-[#229ED9] group-hover:underline">Открыть <i class="fas fa-arrow-right text-[10px]"></i></span>
+                    </a>
+
+                    <!-- Karess TikTok -->
+                    <a href="https://www.tiktok.com/@karres.studio" target="_blank" rel="noopener noreferrer" 
+                       class="glass-card p-6 rounded-2xl flex flex-col items-center text-center group hover:border-[#ff0050]/50 transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-14 h-14 rounded-2xl bg-[#ff0050]/10 text-[#ff0050] flex items-center justify-center text-2xl mb-4 group-hover:scale-110 group-hover:bg-[#ff0050] group-hover:text-white transition-all shadow-lg">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </div>
+                        <h3 class="font-title text-lg font-bold text-white mb-1">TikTok Karess</h3>
+                        <p class="text-xs text-gray-400 mb-4">Видео Karess Studio</p>
+                        <span class="mt-auto text-xs font-bold text-[#ff0050] group-hover:underline">Смотреть <i class="fas fa-arrow-right text-[10px]"></i></span>
+                    </a>
+
+                    <!-- Kvass YouTube -->
                     <a href="https://www.youtube.com/@KvassStudio" target="_blank" rel="noopener noreferrer" 
-                       class="glass-card p-8 rounded-2xl flex flex-col items-center text-center group hover:border-[#FF0000]/50 transition-all duration-300 hover:-translate-y-1">
-                        <div class="w-16 h-16 rounded-2xl bg-[#FF0000]/10 text-[#FF0000] flex items-center justify-center text-3xl mb-4 group-hover:scale-110 group-hover:bg-[#FF0000] group-hover:text-white transition-all duration-300 shadow-lg">
+                       class="glass-card p-6 rounded-2xl flex flex-col items-center text-center group hover:border-[#FF0000]/50 transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-14 h-14 rounded-2xl bg-[#FF0000]/10 text-[#FF0000] flex items-center justify-center text-2xl mb-4 group-hover:scale-110 group-hover:bg-[#FF0000] group-hover:text-white transition-all shadow-lg">
                             <i class="fa-brands fa-youtube"></i>
                         </div>
-                        <h3 class="font-title text-xl font-bold text-white mb-2">YouTube</h3>
-                        <p class="text-sm text-gray-400 mb-6">Видео-демонстрации, геймплейные трейлеры и процессы создания игр.</p>
-                        <span class="mt-auto inline-flex items-center gap-2 text-xs font-bold text-[#FF0000] group-hover:underline">
-                            <span>Смотреть видео</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </span>
-                    </a>
-
-                    <!-- Itch.io -->
-                    <a href="https://kvassstudio.itch.io/" target="_blank" rel="noopener noreferrer" 
-                       class="glass-card p-8 rounded-2xl flex flex-col items-center text-center group hover:border-orange-500/50 transition-all duration-300 hover:-translate-y-1">
-                        <div class="w-16 h-16 rounded-2xl bg-orange-500/10 text-orange-500 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300 shadow-lg">
-                            <i class="fa-brands fa-itch-io"></i>
-                        </div>
-                        <h3 class="font-title text-xl font-bold text-white mb-2">Itch.io</h3>
-                        <p class="text-sm text-gray-400 mb-6">Официальный профиль с возможностью скачать и сыграть во все наши игры.</p>
-                        <span class="mt-auto inline-flex items-center gap-2 text-xs font-bold text-orange-400 group-hover:underline">
-                            <span>Перейти в профиль</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </span>
+                        <h3 class="font-title text-lg font-bold text-white mb-1">YouTube Kvass</h3>
+                        <p class="text-xs text-gray-400 mb-4">Девлоги KvassStudio</p>
+                        <span class="mt-auto text-xs font-bold text-[#FF0000] group-hover:underline">Смотреть <i class="fas fa-arrow-right text-[10px]"></i></span>
                     </a>
 
                 </div>
@@ -491,27 +601,29 @@
                 <div class="flex flex-col md:flex-row items-center justify-between gap-6">
                     
                     <div class="flex items-center space-x-3">
-                        <img src="https://i.ibb.co.com/prJDZjvN/Kvass-Studio.jpg" 
-                             alt="KvassStudio Logo" 
-                             onerror="this.src='https://placehold.co/100x100/13171f/f97316?text=KS'"
-                             class="w-8 h-8 rounded-lg object-cover">
-                        <span class="font-title text-lg font-bold text-white">Kvass<span class="text-orange-500">Studio</span></span>
+                        <div class="flex items-center -space-x-2">
+                            <img src="https://i.ibb.co.com/prJDZjvN/Kvass-Studio.jpg" alt="KvassStudio Logo" class="w-7 h-7 rounded-md object-cover ring-1 ring-orange-500">
+                            <img src="https://i.ibb.co.com/3YdYWWwX/image.png" alt="Karess Studio Logo" class="w-7 h-7 rounded-md object-cover ring-1 ring-purple-500">
+                        </div>
+                        <span class="font-title text-base font-bold text-white">KvassStudio & Karess Studio</span>
                     </div>
 
-                    <div class="text-gray-500 text-sm text-center">
-                        &copy; <span id="year"></span> KvassStudio. Все права защищены. Разработано KlassKvas & MRkotyast.
+                    <div class="text-gray-500 text-xs text-center">
+                        &copy; <span id="year"></span> Игровые студии KlassKvas & MRkotyast. Все права защищены.
                     </div>
 
-                    <!-- Ссылки в футере -->
-                    <div class="flex items-center space-x-5">
-                        <a href="https://t.me/mwKvassStudio" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-[#229ED9] text-xl transition-colors" title="Telegram">
-                            <i class="fa-brands fa-telegram"></i>
+                    <div class="flex items-center space-x-4">
+                        <a href="https://t.me/mwKvassStudio" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-[#229ED9] transition-colors" title="Telegram Kvass">
+                            <i class="fa-brands fa-telegram text-lg"></i>
                         </a>
-                        <a href="https://www.youtube.com/@KvassStudio" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-[#FF0000] text-xl transition-colors" title="YouTube">
-                            <i class="fa-brands fa-youtube"></i>
+                        <a href="https://t.me/kotyastchanel" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-purple-400 transition-colors" title="Telegram Karess">
+                            <i class="fa-brands fa-paper-plane text-lg"></i>
                         </a>
-                        <a href="https://kvassstudio.itch.io/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-orange-400 text-xl transition-colors" title="Itch.io">
-                            <i class="fa-brands fa-itch-io"></i>
+                        <a href="https://www.tiktok.com/@karres.studio" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-[#ff0050] transition-colors" title="TikTok Karess">
+                            <i class="fa-brands fa-tiktok text-lg"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@KvassStudio" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-[#FF0000] transition-colors" title="YouTube Kvass">
+                            <i class="fa-brands fa-youtube text-lg"></i>
                         </a>
                     </div>
 
@@ -524,6 +636,7 @@
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
 
+        // Мобильное меню
         const menuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const menuIcon = document.getElementById('menu-icon');
@@ -549,6 +662,35 @@
                 menuIcon.classList.add('fa-bars');
             });
         });
+
+        // Фильтрация игр
+        function filterGames(type) {
+            const gameCards = document.querySelectorAll('.game-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-gradient-to-r', 'from-orange-500', 'to-purple-600', 'text-white', 'shadow-md');
+                btn.classList.add('glass-card', 'text-gray-300');
+            });
+
+            const activeBtn = document.getElementById(`btn-${type}`);
+            if(activeBtn) {
+                activeBtn.classList.remove('glass-card', 'text-gray-300');
+                activeBtn.classList.add('bg-gradient-to-r', 'from-orange-500', 'to-purple-600', 'text-white', 'shadow-md');
+            }
+
+            gameCards.forEach(card => {
+                if (type === 'all') {
+                    card.style.display = 'flex';
+                } else if (type === 'kvass' && card.classList.contains('kvass')) {
+                    card.style.display = 'flex';
+                } else if (type === 'karess' && card.classList.contains('karess')) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
     </script>
 </body>
 </html>
